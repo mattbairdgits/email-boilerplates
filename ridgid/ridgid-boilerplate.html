@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width"/>
+        <title>Torque Responsive Email Boilerplate</title>
+
+        <style type="text/css">
+            /*////// RESET STYLES //////*/
+            body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+            table{border-collapse:collapse;}
+            img, a img{border:0; outline:none; text-decoration:none;}
+            h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+            p{margin: 1em 0;}
+
+            /*////// CLIENT-SPECIFIC STYLES //////*/
+            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+            #outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+            img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+            /*////// FRAMEWORK STYLES //////*/
+            .flexibleContainerCell{padding-Right:20px; padding-Left:20px;}
+            .flexibleImage{height:auto;}
+            .shim{padding-top:20px;padding-bottom:20px;}
+            .megaShim{padding-top:40px;padding-bottom:40px;}
+            .margin, .margin--hide .margin--show {font-size: 0; line-height: 0;}
+            .margin--show {display:none;}
+
+            /*////// GENERAL STYLES //////*/
+            body, #bodyTable{background-color:#FFFFFF;}
+            #bodyCell{padding-top:40px; padding-bottom:40px;}
+            #emailBody{background-color:#F4F4F2; border-collapse:separate; border-radius:4px;}
+
+            .textContent, .textContent--centered{color:#323232; font-family: Helvetica Neue, Helvetica, sans-serif; font-size:19px; line-height:125%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+            .textContent{text-align:left;}
+            .textContent--centered {text-align:center;}
+            .textContent a, .textContentLast a{color:#464646; font-weight:bold; text-decoration:underline;}
+
+            /*////// ALT TAG STYLES //////*/
+            img[src$=".png"], img[src$=".jpg"]{font-family:Futura, Helvetica, sans-serif; font-size:16px; font-weight:italic;}
+            img[src$=".png"]{color:#F58026;}
+            img[src$=".jpg"]{color:#FFFFFF;background-color:#F58026;}
+
+            /*////// RIDGID SPECIFICS //////*/
+            .depotCTA a{color:#FFFFFF; font-family: Helvetica Neue, Helvetica, sans-serif; font-size:16px; line-height:125%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: left; font-weight:bold; text-decoration:none;}
+            .depotCTA{padding-left:15px;}
+            .lsaText{font-family: Helvetica Neue, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: left;}
+
+            /*////// BUTTON STYLES //////*/
+            .emailButton{background-color:#F58026; border-collapse:separate; border-radius:4px;}
+            .buttonContent{color:#FFFFFF; font-family: Helvetica Neue, Helvetica, sans-serif; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none;}
+
+            /*////// MOBILE STYLES //////*/
+            @media only screen and (max-width: 560px){
+                /*////// CLIENT-SPECIFIC STYLES //////*/
+                body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+
+                /*////// FRAMEWORK STYLES //////*/
+                /*
+                    CSS selectors are written in attribute
+                    selector format to prevent Yahoo Mail
+                    from rendering media query styles on
+                    desktop.
+                */
+                table[id="emailBody"], table[class="flexibleContainer"], table[id="footerBody"]{width:100% !important;}
+
+                /*
+                    The following style rule makes any
+                    image classed with 'flexibleImage'
+                    fluid when the query activates.
+                    Make sure you add an inline max-width
+                    to those images to prevent them
+                    from blowing out.
+                */
+                img[class="flexibleImage"]{height:auto !important; width:100% !important;}
+
+                td[class="textContent"], td[class="textContentLast"], td[class="imageContent"]{text-align:center !important;}
+                td[class="textContentLast"]{padding-top:20px !important;}
+                a[class="headLinks"]{margin-left:8px !important; margin-right:8px !important;}
+
+                td[class="mobileHide"]{display:none !important;}
+                td[class="margin--hide"]{display:none !important;padding-bottom:0 !important;}
+                td[class="margin--show"]{display:block !important; padding-bottom:12px !important;}
+                td[class="margin--show6"]{display:block !important; padding-bottom:6px !important;}
+
+                /*
+                    Make buttons in the email span the
+                    full width of their container, allowing
+                    for left- or right-handed ease of use.
+                */
+                table[class="footerButton"], table[class="emailButton"], table[class="footerButtonLast"]{width:100% !important;}
+                table[class="emailButton"]{margin-bottom:10px !important;}
+                td[class="buttonContent"]{padding:0 !important;}
+                td[class="buttonContent"] a{padding:15px !important;}
+
+
+                /*////// GENERAL STYLES //////*/
+                td[id="bodyCell"]{padding-top:10px !important; padding-Right:10px !important; padding-Left:10px !important;}
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell">
+                        <!-- EMAIL CONTAINER // -->
+                        <!--
+                            The table "emailBody" is the email's container.
+                            Its width can be set to 100% for a color band
+                            that spans the width of the page.
+                        -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" id="emailBody" background="pattern.png">
+
+
+                          <!-- MODULE ROW // -->
+                          <tr>
+                              <td align="center" valign="top">
+                                  <!-- CENTERING TABLE // -->
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                          <td align="center" valign="top">
+                                              <!-- FLEXIBLE CONTAINER // -->
+                                              <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                  <tr>
+                                                      <td align="center" valign="top" width="600" class="flexibleContainerCell">
+
+                                                          <!-- CONTENT TABLE // -->
+                                                          <table align="Center" border="0" cellpadding="0" cellspacing="0" width="207" class="flexibleContainer">
+                                                              <tr>
+                                                                  <td align="Center" valign="top">
+                                                                      <a href="https://www.ridgid.com/us/en/power-tools" target="_blank">
+                                                                          <img src="ridgid-logo.png" alt="RIDGID" width="207" class="flexibleImage" style="max-width:207px;" alt="RYOBI Outdoor"/>
+                                                                      </a>
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                          <!-- // CONTENT TABLE -->
+
+                                                      </td>
+                                                  </tr>
+                                              </table>
+                                              <!-- // FLEXIBLE CONTAINER -->
+                                          </td>
+                                      </tr>
+                                  </table>
+                                  <!-- // CENTERING TABLE -->
+                              </td>
+                          </tr>
+                          <!-- // MODULE ROW -->
+
+
+                          <!-- MODULE ROW // -->
+                          <tr>
+                              <td align="center" valign="top">
+                                  <!-- CENTERING TABLE // -->
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                          <td align="center" valign="top">
+                                              <!-- FLEXIBLE CONTAINER // -->
+                                              <table bgcolor="#464646" border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                  <tr>
+                                                      <td valign="top" width="600" class="flexibleContainerCell">
+
+                                                          <!-- CONTENT TABLE // -->
+                                                          <table align="Center" border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                                                              <tr>
+                                                                  <td align="Center" valign="middle" width="43" height="44">
+                                                                      <a href="http://www.homedepot.com/c/KH_TH_RIDGID_Brand" target="_blank">
+                                                                          <img src="home-depot.png" alt="HD" width="43" height="44" style="max-width:43px;display:block" />
+                                                                      </a>
+                                                                  </td>
+                                                                  <td align="Left" valign="middle" class="depotCTA">
+                                                                      <a href="http://www.homedepot.com/c/KH_TH_RIDGID_Brand" target="_blank">
+                                                                          Sold Exclusively at Home Depot. Available in Canada Only
+                                                                      </a>
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                          <!-- // CONTENT TABLE -->
+
+
+                                                      </td>
+                                                  </tr>
+                                              </table>
+                                              <!-- // FLEXIBLE CONTAINER -->
+                                          </td>
+                                      </tr>
+                                  </table>
+                                  <!-- // CENTERING TABLE -->
+                              </td>
+                          </tr>
+                          <!-- // MODULE ROW -->
+
+
+                        </table>
+                        <!-- // EMAIL CONTAINER -->
+
+
+                        <!-- FOOTER CONTAINER // -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" id="footerBody">
+
+                            <!-- MODULE ROW // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                    <tr>
+                                                        <td valign="top" width="600">
+
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="280" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center">
+                                                                        <img src="lsa.jpg" alt="Lifetime Service Agreement" width="280" class="flexibleImage" style="max-width:280px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+
+                                                            <!-- MARGIN TABLE // -->
+                                                            <table align="Right" cellpadding="0" cellspacing="0" border="0" width="290" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td class="margin--hide" valign="top" align="center" style="padding-top:32px">&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // MARGIN TABLE -->
+
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Right" border="0" cellpadding="0" cellspacing="0" width="280" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="middle" class="lsaText" style="color:#F58026; font-size: 30px; font-weight: bold; line-height:90%;">
+                                                                        FREE <span style="color:#404040;font-weight:normal;">BATTERIES.</span>
+                                                                        <br>
+                                                                        FREE <span style="color:#404040;font-weight:normal;">PARTS.</span>
+                                                                        <br>
+                                                                        FREE <span style="color:#404040;font-weight:normal;">SERVICE.</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="Center" valign="middle" class="lsaText" style="color:#f58026; font-size: 40px; font-weight: bold; line-height:100%;">
+                                                                        FOR LIFE
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="Center" valign="middle" class="lsaText" style="font-size: 13.7px; color: #404040; font-weight: normal; line-height:80%;">
+                                                                        <em>REGISTRATION REQUIRED</em>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- MARGIN TABLE // -->
+                                                            <table align="Right" cellpadding="0" cellspacing="0" border="0" width="100%" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td class="margin--show" valign="top" align="center" style="padding-top:20px">&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // MARGIN TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+                            <!-- MODULE ROW // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                    <tr>
+                                                        <td valign="top" width="600" style="padding-bottom:20px">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="280" class="emailButton">
+                                                                <tr>
+                                                                    <td align="center" valign="middle" class="buttonContent">
+                                                                        <a href="https://www.ridgid.com/us/en/three-year-limited-lsa" target="_blank">Learn More</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Right" border="0" cellpadding="0" cellspacing="0" width="280" class="emailButton">
+                                                                <tr>
+                                                                    <td align="center" valign="middle" class="buttonContent">
+                                                                        <a href="http://register.ridgidpower.com/customer/registrations/new" target="_blank">Register Now</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer" style="border-top:12px solid #464646">
+                                                    <tr>
+                                                        <td valign="top" width="600" style="padding-top:20px">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="235" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" class="imageContent">
+                                                                        <img src="follow-us.png" alt="@RIDGIDPowerTools" width="235" class="flexibleImage" style="max-width:235px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Right" cellpadding="0" cellspacing="0" border="0" width="350" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="bottom" align="center">
+                                                                        <a href="https://www.facebook.com/ridgidpowertools" target="_blank">
+                                                                            <img src="facebook.png" width="45" height="46" alt="Facebook" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="bottom" align="center">
+                                                                        <a href="https://twitter.com/ridgidpower" target="_blank">
+                                                                            <img src="twitter.png" width="46" height="46" alt="Twitter" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="bottom" align="center">
+                                                                        <a href="https://www.youtube.com/playlist?list=PLC301FDF0FB78B8BD" target="_blank">
+                                                                            <img src="youtube.png" width="110" height="46" alt="YouTube" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="bottom" align="center">
+                                                                        <a href="https://plus.google.com/117986769718653875331" target="_blank">
+                                                                            <img src="googleplus.png" width="46" height="46" alt="Google+" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="bottom" align="center">
+                                                                        <a href="http://instagram.com/ridgidpowertools" target="_blank">
+                                                                            <img src="instagram.png" width="45" height="46" alt="Instagram" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                        </table>
+                        <!-- // FOOTER CONTAINER -->
+
+
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
