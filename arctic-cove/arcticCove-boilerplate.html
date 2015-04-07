@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width"/>
+        <title>Arctic Cove</title>
+
+        <style type="text/css">
+            /*////// RESET STYLES //////*/
+            body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+            table{border-collapse:collapse;}
+            img, a img{border:0; outline:none; text-decoration:none;}
+            h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+            p{margin: 1em 0;}
+
+            /*////// CLIENT-SPECIFIC STYLES //////*/
+            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+            #outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+            img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+            /*////// FRAMEWORK STYLES //////*/
+            .flexibleContainerCell{padding-Right:20px; padding-Left:20px;}
+            .flexibleImage{height:auto;}
+            .shim{padding-top:20px;padding-bottom:20px;}
+            .megaShim{padding-top:40px;padding-bottom:40px;}
+            .margin, .margin--hide .margin--show {font-size: 0; line-height: 0;}
+            .margin--show {display:none;}
+
+            /*////// GENERAL STYLES //////*/
+            body, #bodyTable{background-color:#FFFFFF;}
+            /*#bodyCell{padding-top:40px; padding-bottom:40px;}*/
+            #emailBody{background-color:#FFFFFF; border-collapse:separate;}
+            h1, h2, h3, h4, h5, h6{color:#202020; font-family: Helvetica, sans-serif; font-size:20px; line-height:125%; text-align:Left;}
+
+            .textContent, .textContent--centered{color:#141C20; font-family: Helvetica, sans-serif; font-size:21px; line-height:125%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+            .textContent{text-align:left;}
+            .textContent--centered {text-align:center;}
+            .textContent a, .textContentLast a{color:#141C20; font-weight:bold; text-decoration:underline;}
+
+            /*////// ALT TAG STYLES //////*/
+            /*
+                Brand Colors -
+                Blue: #006ea7;
+            */
+            img[src$=".png"], img[src$=".jpg"]{font-family: Helvetica, sans-serif; font-size:16px; font-weight:italic;}
+            img[src$=".png"]{color:#006EA7;}
+            img[src$=".jpg"]{color:#FFFFFF;background-color:#006EA7;}
+
+            /*////// BUTTON STYLES //////*/
+            .emailButton{background-color:#81DEFD; border-collapse:separate; border-radius:4px;}
+            .buttonContent{color:#FFFFFF; font-family: Helvetica, sans-serif; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none;}
+
+            /*////// MOBILE STYLES //////*/
+            @media only screen and (max-width: 560px){
+                /*////// CLIENT-SPECIFIC STYLES //////*/
+                body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+
+                table[id="emailBody"], table[class="flexibleContainer"]{width:100% !important;}
+                img[class="flexibleImage"]{height:auto !important; width:100% !important;}
+
+                td[class="textContent"], td[class="textContentLast"], td[class="imageContent"]{text-align:center !important;}
+                td[class="textContentLast"]{padding-top:20px !important;}
+                a[class="headLinks"]{margin-left:8px !important; margin-right:8px !important;}
+
+                td[class="mobileHide"]{display:none !important;}
+                td[class="margin--hide"]{display:none !important;padding-bottom:0 !important;}
+                td[class="margin--show"]{display:block !important; padding-bottom:12px !important;}
+                td[class="margin--show6"]{display:block !important; padding-bottom:6px !important;}
+
+                td[class="centerCol"]{padding:0 !important;text-align:center !important;}
+                td[class="bubbleNav"]{padding-top:10px !important;padding-left:0px !important;}
+
+                /*
+                    Make buttons in the email span the
+                    full width of their container, allowing
+                    for left- or right-handed ease of use.
+                */
+                table[class="footerButton"], table[class="emailButton"], table[class="footerButtonLast"]{width:100% !important;}
+                table[class="emailButton"]{margin-bottom:10px !important;}
+                td[class="buttonContent"]{padding:0 !important;}
+                td[class="buttonContent"] a{padding:15px !important;}
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell">
+                        <!-- EMAIL CONTAINER // -->
+                        <!--
+                            The table "emailBody" is the email's container.
+                            Its width can be set to 100% for a color band
+                            that spans the width of the page.
+                        -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailBody">
+
+
+                            <!-- MODULE ROW – Logo // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table bgcolor="#006ea7" border="0" cellpadding="0" cellspacing="0" width="100%" background="bg.jpg">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="600" style="padding-top:40px">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Center" border="0" cellpadding="0" cellspacing="0" width="311" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="bottom">
+                                                                        <a href="http://www.arcticcove.com/" target="_blank">
+                                                                            <img src="logo.png" alt="Arctic Cove" width="311" class="flexibleImage" style="max-width:311px;display:block;"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Center" border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="top">
+                                                                        <img src="divver-top.png" width="600" class="flexibleImage" style="max-width:600px;display:block;"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – Headline // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="600" class="megaShim">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="top" class="imageContent">
+                                                                          <img src="smoking-mantis.jpg" alt="Why" width="600" class="flexibleImage" style="max-width:600px;"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – Copy // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="500" class="flexibleContainerCell" style="padding-bottom:40px">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td valign="top" class="textContent--centered" style="padding-top:18px; padding-bottom:18px;">
+                                                                        Let us know on Twitter or Facebook that you voted for <strong>a chance to win a $300 cooling prize package for the&nbsp;NEW&nbsp;YEAR!</strong>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – Full-Width Background Color // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table bgcolor="#2B2B2B" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="600" class="megaShim">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="560" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="bottom" class="imageContent">
+                                                                        <img src="smoking-mantis.jpg" alt="Why" width="560" class="flexibleImage" style="max-width:560px;display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – Footer // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table bgcolor="#006ea7" border="0" cellpadding="0" cellspacing="0" width="100%" background="bg.jpg">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="Center" valign="top" width="600" class="flexibleContainerCell" style="padding-bottom:30px">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="600" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="bottom" class="imageContent">
+                                                                        <img src="divver-bottom.png" width="600" class="flexibleImage" style="max-width:600px;display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- MARGIN TABLE // -->
+                                                            <table align="Right" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                                <tr>
+                                                                    <td class="margin" valign="top" align="center" style="padding-bottom:10px">&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // MARGIN TABLE -->
+
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="217" height="95" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="middle" class="imageContent">
+                                                                        <a href="http://www.arcticcove.com/" target="_blank">
+                                                                            <img src="logo.png" alt="Arctic Cove" width="217" class="flexibleImage" style="max-width:217px;padding-bottom:8px" />
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Right" cellpadding="0" cellspacing="0" border="0" width="250" height="95" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="middle" align="center">
+                                                                        <a href="http://facebook.com/arcticcovecooling" target="_blank">
+                                                                            <img src="facebook.png" width="36" height="36" alt="Facebook" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="middle" align="center">
+                                                                        <a href="http://twitter.com/arcticcove" target="_blank">
+                                                                            <img src="twitter.png" width="36" height="36" alt="Twitter" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="middle" align="center">
+                                                                        <a href="http://www.youtube.com/channel/UCbGnrYZM_-hD9JqIofrI2xA" target="_blank">
+                                                                            <img src="youtube.png" width="36" height="36" alt="YouTube" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="middle" align="center">
+                                                                        <a href="http://www.pinterest.com/arcticcove/" target="_blank">
+                                                                            <img src="pinterest.png" width="36" height="36" alt="Pinterest" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="middle" align="center">
+                                                                        <a href="http://instagram.com/arcticcove" target="_blank">
+                                                                            <img src="instagram.png" width="36" height="36" alt="Instagram" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                        </table>
+                        <!-- // EMAIL CONTAINER -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
