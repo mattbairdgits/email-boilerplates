@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width"/>
+        <title>RYOBI Nation</title>
+
+        <style type="text/css">
+            /*////// RESET STYLES //////*/
+            body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+            table{border-collapse:collapse;}
+            img, a img{border:0; outline:none; text-decoration:none;}
+            h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+            p{margin: 1em 0;}
+
+            /*////// CLIENT-SPECIFIC STYLES //////*/
+            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+            #outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+            img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+            /*////// FRAMEWORK STYLES //////*/
+            .flexibleContainerCell{padding-Right:20px; padding-Left:20px;}
+            .flexibleImage{height:auto;}
+            .imageContent{padding-bottom:20px}
+            .shim{padding-top:20px;padding-bottom:20px;}
+            .megaShim{padding-top:40px;padding-bottom:40px;}
+            .margin, .margin--hide .margin--show {font-size: 0; line-height: 0;}
+            .margin--show {display:none;}
+
+            /*////// GENERAL STYLES //////*/
+            body, #bodyTable{background-color:#f4f4f2;}
+            #bodyCell{padding-top:40px; padding-bottom:40px;}
+            #emailBody{background-color:#FFFFFF; border-collapse:separate; border-radius:4px;}
+
+            .textContent, .textContent--centered{color:#323232; font-family:Futura, Helvetica, sans-serif; font-size:19px; line-height:125%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+            .textContentSmall, .centerCol{color:#44484d; font-family:Futura, Helvetica, sans-serif; font-size:14px; line-height:145%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+            .textContent, .textContentSmall, .centerCol{text-align:left;}
+            .textContent--centered {text-align:center;}
+            .textContent a{color:#464646; font-weight:bold; text-decoration:underline;}
+
+            /*////// ALT TAG STYLES //////*/
+            img[src$=".png"], img[src$=".jpg"]{font-family:Futura, Helvetica, sans-serif; font-size:16px; font-weight:italic;}
+            img[src$=".png"]{color:#B7CF40;}
+            img[src$=".jpg"]{color:#FFFFFF;background-color:#B7CF40;}
+
+            /*////// RYOBI PT / NATION SPECIFICS //////*/
+            .bubbleNav {padding-left:20px;}
+            .centerCol {padding-left:22px;}
+
+            /*////// BUTTON STYLES //////*/
+            .emailButton{background-color:#B7CF40; border-collapse:separate; border-radius:4px;}
+            .buttonContent{color:#FFFFFF; font-family:Futura, Helvetica, sans-serif; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none;}
+
+            .footerButton {background-color:#42B3EE; border-bottom:3px solid #3999CC; border-collapse:separate; border-radius:4px;}
+
+            /*////// MOBILE STYLES //////*/
+            @media only screen and (max-width: 600px){
+              body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+
+              table[id="emailBody"], table[class="flexibleContainer"]{width:100% !important;}
+              img[class="flexibleImage"]{height:auto !important; width:100% !important;}
+
+              td[class="textContent"], td[class="imageContent"], td[class="textContentSmall"]{text-align:center !important;}
+              td[class="textContentLast"]{padding-top:20px !important;}
+
+              td[class="mobileHide"]{display:none !important;}
+              td[class="margin--hide"]{display:none !important;padding-bottom:0 !important;}
+              td[class="margin--show"]{display:block !important; padding-bottom:12px !important;}
+              td[class="margin--show6"]{display:block !important; padding-bottom:6px !important;}
+
+              td[class="centerCol"]{padding-left:0 !important;padding-right:0 !important;text-align:center !important;}
+              td[class="bubbleNav"]{padding-top:10px !important;padding-left:0px !important;}
+
+              table[class="footerButton"], table[class="emailButton"], table[class="footerButtonLast"]{width:100% !important;}
+              table[class="emailButton"]{margin-bottom:10px !important;}
+              td[class="buttonContent"]{padding:0 !important;}
+              td[class="buttonContent"] a{padding:15px !important;}
+
+              td[id="bodyCell"]{padding-top:10px !important; padding-Right:10px !important; padding-Left:10px !important;}
+            }
+        </style>
+
+        <!--[if gte mso 9]>
+            <style>
+                .centerCol {
+                   padding-left:11px !important;
+                }
+            </style>
+        <![endif]-->
+
+    </head>
+    <body>
+        <center>
+            <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell">
+                        <!-- EMAIL CONTAINER // -->
+                        <!--
+                            The table "emailBody" is the email's container.
+                            Its width can be set to 100% for a color band
+                            that spans the width of the page.
+                        -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="640" id="emailBody" background="pattern.png">
+
+
+                            <!-- MODULE ROW – Header // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="Left" valign="top" width="640" class="flexibleContainerCell shim">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="232" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="imageContent">
+                                                                        <a href="https://www.ryobitools.com/nation" target="_blank">
+                                                                            <img src="nation-logo.png" alt="RYOBI Nation" width="232" class="flexibleImage" style="max-width:232px;"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Center" cellpadding="0" cellspacing="0" border="0">
+                                                                <tr>
+                                                                    <td class="bubbleNav" width="115" valign="bottom" align="Left">
+                                                                        <a href="https://www.ryobitools.com/power-tools/products/list/family/one-plus" target="_blank">
+                                                                            <img src="oneplus.png" alt="ONE+" width="115" height="39" border="0" class="flexibleImage">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td width="114" valign="bottom" align="Left">
+                                                                        <a href="https://www.ryobitools.com/power-tools/products/home" target="_blank">
+                                                                            <img src="powertools.png" alt="Power Tools" width="114" height="39" border="0" class="flexibleImage">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td width="112" valign="bottom" align="Left">
+                                                                        <a href="https://www.ryobitools.com/power-tools/promotions" target="_blank">
+                                                                            <img src="promotions.png" alt="Promotions" width="112" height="39" border="0" class="flexibleImage">
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+                            <!-- MODULE ROW – Challenge Winner Images // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="640" class="flexibleContainerCell">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="imageContent">
+                                                                        <img src="headline.png" alt="Contest Winners Announced" width="512" class="flexibleImage" style="max-width:512px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="imageContent">
+                                                                      <a href="https://www.ryobitools.com/nation/projects/3773" target="_blank" >
+                                                                          <img src="challenge-winner.jpg" alt="RYOBI Tool Cabinet" width="600" class="flexibleImage" style="max-width:600px;" />
+                                                                      </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – Challenge Winner Info // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="640" class="flexibleContainerCell">
+
+                                                          <!-- CONTENT TABLE // -->
+                                                          <table align="Left" border="0" cellpadding="0" cellspacing="0" width="147" class="flexibleContainer">
+                                                              <tr>
+                                                                  <td align="Center" valign="top" class="imageContent">
+                                                                      <img src="heart-diy.jpg" alt="We &lt;3 DIY" width="147" class="flexibleImage" style="max-width:147px;" />
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                          <!-- // CONTENT TABLE -->
+
+                                                          <!-- CONTENT TABLE // -->
+                                                          <table align="Right" border="0" cellpadding="0" cellspacing="0" width="420" class="flexibleContainer">
+                                                              <tr>
+                                                                  <td valign="top" class="textContent">
+                                                                    <strong>We &lt;3 DIY Winner:</strong> MADRONA
+                                                                    <br>
+                                                                    <span style="font-size:16px">I built this cabinet a while ago and recently added the pullout vertical shelf for my new multi-charger. I wanted a place where my 18V batteries could be charged and be in a&nbsp;warm environment at the same time.
+                                                                    <a href="https://www.ryobitools.com/nation/projects/3773" target="_blank" >Read More »</a></span>
+                                                                  </td>
+                                                              </tr>
+                                                          </table>
+                                                          <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – You Voted They Won // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="640" class="flexibleContainerCell">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" style="padding-bottom:30px">
+                                                                        <img src="dotted-line.png" width="600" class="flexibleImage" style="max-width:600px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="imageContent">
+                                                                        <img src="you-voted.png" alt="You Voted. They Won." width="319" class="flexibleImage" style="max-width:319px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – 3 Column Winners // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td valign="top" width="640" class="flexibleContainerCell">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="185" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="top" class="textContentSmall">
+                                                                        Easy
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="Center" valign="top" style="padding-bottom:5px">
+                                                                        <a href="https://www.ryobitools.com/nation/projects/3765" target="_blank">
+                                                                            <img src="easy.jpg" alt="Knife Holder" width="185" class="flexibleImage" style="max-width:185px;" />
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td valign="top" class="textContentSmall" style="padding-bottom:25px">
+                                                                        <strong style="font-size:16px">KNIFE HOLDER</strong>
+                                                                        <br />
+                                                                        Submitted by: JBOUT
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="185" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="top" class="centerCol">
+                                                                        Intermediate
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="centerCol" style="padding-bottom:5px">
+                                                                        <a href="https://www.ryobitools.com/nation/projects/3760" target="_blank">
+                                                                            <img src="intermediate.jpg" alt="Benches" width="185" style="max-width:185px;" />
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td valign="top" class="centerCol" style="padding-bottom:25px">
+                                                                        <strong style="font-size:16px">SCHOOL BENCHES</strong>
+                                                                        <br />
+                                                                        Submitted by: GALICIA2
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="185" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="top" class="centerCol">
+                                                                        Advanced
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="centerCol" style="padding-bottom:5px">
+                                                                        <a href="https://www.ryobitools.com/nation/projects/3863" target="_blank">
+                                                                            <img src="hard.jpg" alt="Shoffice :)" width="185" class="flexibleImage" style="max-width:185px;" />
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td valign="top" class="centerCol" style="padding-bottom:25px">
+                                                                        <strong style="font-size:16px">HOME OFFICE SHED - THE&nbsp;SHOFFICE!</strong>
+                                                                        <br />
+                                                                        Submitted by: SOUTHFANNING
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – New Challenge // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td align="center" valign="top" width="640" class="flexibleContainerCell">
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" style="padding-bottom:30px">
+                                                                        <img src="dotted-line.png" width="600" class="flexibleImage" style="max-width:600px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="520" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" style="padding-bottom:30px">
+                                                                        <img src="new-challenge-title.png" alt="March Project Contest" width="520" class="flexibleImage" style="max-width:520px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Left" border="0" cellpadding="0" cellspacing="0" width="280" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td align="Center" valign="top">
+                                                                        <a href="https://www.ryobitools.com/nation/contests" target="_blank">
+                                                                            <img src="new-challenge-graphic.jpg" alt="Tile with Style" width="280" class="flexibleImage" style="max-width:350px;" />
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table align="Right" border="0" cellpadding="0" cellspacing="0" width="280" class="flexibleContainer">
+                                                                <tr>
+                                                                    <td valign="top" class="textContent" style="padding-top:16px;padding-bottom:16px">
+                                                                        <strong>Tile with Style!</strong>
+                                                                        <br>
+                                                                        Enter by submitting your tile project on Nation or share pics of your favorite RYOBI tools or tile projects using&nbsp;#RYOBIStyle.</strong>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="bottomShim">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="emailButton">
+                                                                            <tr>
+                                                                                <td align="center" valign="middle" class="buttonContent">
+                                                                                    <a href="http://woobox.com/d5jvyq" target="_blank">Enter the Contest »</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                            <!-- CONTENT TABLE // -->
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tr>
+                                                                    <td align="Center" valign="top" class="imageContent" style="padding-top:30px">
+                                                                        <img src="dotted-line.png" width="600" class="flexibleImage" style="max-width:600px;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                            <!-- MODULE ROW – Footer // -->
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- CENTERING TABLE // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!-- FLEXIBLE CONTAINER // -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="640" class="flexibleContainer">
+                                                    <tr>
+                                                        <td valign="top" width="640" class="flexibleContainerCell" style="padding-top:10px;padding-bottom:40px">
+
+                                                          <!-- CONTENT TABLE // -->
+                                                          <!--
+                                                              The emailButton table's width can be changed
+                                                              to affect the look of the button. To make the
+                                                              button width dependent on the text inside, leave
+                                                              the width blank. When a button is placed in a column,
+                                                              it's helpful to set the width to 100%.
+                                                          -->
+                                                          <table align="Left" border="0" cellpadding="0" cellspacing="0" width="250" class="flexibleContainer">
+
+                                                            <tr>
+                                                              <td align="Center" valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="footerButton">
+                                                                  <tr>
+                                                                    <td align="center" valign="middle" class="buttonContent">
+                                                                      <a href="*|FORWARD|*" target="_blank">Share With a Friend »</a>
+                                                                    </td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                              <td class="margin" valign="top" align="center" style="padding-bottom:10px">&nbsp;</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                              <td align="Center" valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="footerButton">
+                                                                  <tr>
+                                                                    <td align="center" valign="middle" class="buttonContent">
+                                                                      <a href="https://www.ryobitools.com/" target="_blank">RYOBITools.com »</a>
+                                                                    </td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                              <td class="margin" valign="top" align="center" style="padding-bottom:10px">&nbsp;</td>
+                                                            </tr>
+
+                                                          </table>
+                                                          <!-- // CONTENT TABLE -->
+
+                                                          <!-- CONTENT TABLE // -->
+                                                          <table align="Right" border="0" cellpadding="0" cellspacing="0" width="250" class="flexibleContainer">
+
+                                                            <tr>
+                                                              <td align="Center" valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="footerButton">
+                                                                  <tr>
+                                                                    <td align="center" valign="middle" class="buttonContent">
+                                                                      <a href="https://www.youtube.com/user/ryobichannel" target="_blank">RYOBI YouTube »</a>
+                                                                    </td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                              <td class="margin" valign="top" align="center" style="padding-bottom:10px">&nbsp;</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                              <td align="Center" valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="footerButton">
+                                                                  <tr>
+                                                                    <td align="center" valign="middle" class="buttonContent">
+                                                                      <a href="http://www.homedepot.com/StoreFinder/index.jsp" target="_blank">Home Depot Stores »</a>
+                                                                    </td>
+                                                                  </tr>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+
+                                                          </table>
+                                                          <!-- // CONTENT TABLE -->
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // FLEXIBLE CONTAINER -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // CENTERING TABLE -->
+                                </td>
+                            </tr>
+                            <!-- // MODULE ROW -->
+
+
+                        </table>
+                        <!-- // EMAIL CONTAINER -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
